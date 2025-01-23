@@ -27,9 +27,6 @@ function App() {
           
           {/* Description */}
           <div className="mb-20 max-w-lg">
-            <p className="text-2xl text-white/90 font-light mb-2">
-              I make cool things
-            </p>
             <p className="text-xl text-white/80">
               Electrical Engineer at Columbia University
             </p>
@@ -56,14 +53,14 @@ function App() {
                 <span>nicolas.alarcon@columbia.edu</span>
               </a>
               <a 
-                href="https://linkedin.com/in/nicolasalarcon" 
+                href="https://www.linkedin.com/in/nicolas-alarcon-0665a6149" 
                 className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <Linkedin className="w-6 h-6" />
                 <span>LinkedIn</span>
               </a>
               <a 
-                href="https://github.com/nicolasalarcon" 
+                href="https://github.com/Nico-Alarcon" 
                 className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <Github className="w-6 h-6" />
