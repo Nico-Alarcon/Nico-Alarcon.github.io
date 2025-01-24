@@ -1,11 +1,11 @@
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Download, Cpu, Zap, Radio, Brain, FileText, Music, Microscope, Network, Server, Database } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Download, Cpu, Zap, Radio, Brain, FileText } from 'lucide-react';
 
 function App() {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Hero Section */}
-      <header className="relative h-screen">
+      <header className="relative h-96">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img 
@@ -17,16 +17,16 @@ function App() {
         </div>
         
         {/* Content Container */}
-        <div className="relative h-full container mx-auto px-6 flex flex-col justify-between py-20">
-          {/* Name */}
-          <div className="mt-20">
+        <div className="relative h-full container mx-auto px-6 flex flex-col">
+          {/* Name - Centered */}
+          <div className="flex-grow flex items-center justify-center">
             <h1 className="text-8xl font-bold text-white" style={{ animation: 'slideIn 1s ease-out' }}>
               Nicolas Alarcon
             </h1>
           </div>
           
-          {/* Description */}
-          <div className="mb-20 max-w-lg">
+          {/* Description - Bottom Left */}
+          <div className="mb-8">
             <p className="text-xl text-white/80">
               Electrical Engineer at Columbia University
             </p>
@@ -67,7 +67,7 @@ function App() {
                 <span>GitHub</span>
               </a>
               <a 
-                href="#" 
+                href="/portfolio/assets/NicolasAlarconResume.pdf" 
                 className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <Download className="w-6 h-6" />
@@ -151,7 +151,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/vna-dashboard" 
+                    href="/portfolio/projects/vna-dashboard" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -163,7 +163,7 @@ function App() {
               {/* Lenscribe Project */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1563396983906-b3795482a59a?auto=format&fit=crop&q=80" 
+                  src="/portfolio/assets/LenscribeConceptArt.png" 
                   alt="Lenscribe Project"
                   className="w-full h-64 object-cover"
                 />
@@ -195,7 +195,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/lenscribe" 
+                    href="/portfolio/projects/lenscribe" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -204,10 +204,12 @@ function App() {
                 </div>
               </div>
 
+              
+
               {/* GameBoy DMG Project */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?auto=format&fit=crop&q=80" 
+                  src="/portfolio/assets/gameboyproject.png" 
                   alt="GameBoy Project"
                   className="w-full h-64 object-cover"
                 />
@@ -239,7 +241,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/gameboy-emulator" 
+                    href="/portfolio/projects/gameboy-emulator" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -281,7 +283,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/quadruped-robot" 
+                    href="/portfolio/projects/quadruped-robot" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -315,7 +317,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/superscalar-processor" 
+                    href="/portfolio/projects/superscalar-processor" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -323,6 +325,52 @@ function App() {
                   </a>
                 </div>
               </div>
+
+              {/* Turntable Project */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <img 
+                  src="https://images.unsplash.com/photo-1542208998-f6dbbb27a72f?auto=format&fit=crop&q=80" 
+                  alt="Turntable Project"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-8">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">Automated Vinyl Record Player</h3>
+                      <p className="text-blue-600 font-semibold">Personal Project (In Progress)</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Designed and built a fully custom automated turntable system with digital control
+                  </p>
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-2">Key Features:</h4>
+                    <ul className="list-disc list-inside text-gray-600 space-y-1">
+                      <li>End-of-record detection</li>
+                      <li>Digital speed control</li>
+                      <li>Custom PCB design and fabrication</li>
+                      <li>Wireless control interface</li>
+                      <li>3D printed and CNC mechanical components</li>
+                    </ul>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {['PCB Design', 'Embedded Systems', 'CAD', '3D Printing', 'Motor Control', 'Wireless'].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                  <a 
+                    href="/portfolio/projects/automated-turntable" 
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                  >
+                    <span>View Project</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+
+              
             </div>
           </div>
 
@@ -365,7 +413,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/cell-classifier" 
+                    href="/portfolio/projects/cell-classifier" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -377,7 +425,7 @@ function App() {
               {/* BISC Relay Station */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1589758438368-0ad531db3366?auto=format&fit=crop&q=80" 
+                  src="/portfolio/assets/BISCRelay.png" 
                   alt="Neural Interface System"
                   className="w-full h-64 object-cover"
                 />
@@ -409,7 +457,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/bisc-relay" 
+                    href="/portfolio/projects/bisc-relay" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -435,7 +483,7 @@ function App() {
                     </div>
                   </div>
                   <p className="text-gray-600 mb-4">
-                    Developed a robust HTTP 1.0 web server capable of serving static and dynamic web pages
+                    Developed a robust HTTP 1.0 web server capable of serving static and dynamic web pages. Email if interested in project, as due to Academic Integrity Policy cannot publicly display on GitHub.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {['C', 'HTML', 'Sockets', 'Valgrind', 'GDB'].map((skill) => (
@@ -444,13 +492,6 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="/projects/http-server" 
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                  >
-                    <span>View Project</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
                 </div>
               </div>
 
@@ -463,14 +504,7 @@ function App() {
                     Designed and characterized an On-Chip 2-Stage CMOS 10V/V Feedback Amplifier in Cadence
                   </p>
                   <div className="flex items-center gap-4">
-                    <a 
-                      href="/projects/oscilloscope-amplifier" 
-                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                    >
-                      <span>View Project</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                    <a href="#" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                    <a href="/portfolio/assets/OscilloscopeAmplifier.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
                     </a>
@@ -487,14 +521,7 @@ function App() {
                     Developed a digitally programmable 6th-order Ackerberg-Mossberg topology filter with multiple configurations
                   </p>
                   <div className="flex items-center gap-4">
-                    <a 
-                      href="/projects/antialiasing-filter" 
-                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                    >
-                      <span>View Project</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                    <a href="#" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                    <a href="/portfolio/assets/ProgrammableAAF.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
                     </a>
