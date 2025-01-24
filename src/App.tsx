@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Download, Cpu, Zap, Radio, Brain, FileText } from 'lucide-react';
 
+
 function App() {
   return (
     <div className="min-h-screen bg-slate-50">
@@ -28,7 +29,7 @@ function App() {
           {/* Description - Bottom Left */}
           <div className="mb-8">
             <p className="text-xl text-white/80">
-              Electrical Engineer at Columbia University
+                Electrical Engineer at Columbia University
             </p>
           </div>
         </div>
