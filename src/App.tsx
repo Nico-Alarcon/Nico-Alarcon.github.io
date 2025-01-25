@@ -68,7 +68,7 @@ function App() {
                 <span>GitHub</span>
               </a>
               <a 
-                href="/assets/NicolasAlarconResume.pdf" 
+                href="/NicolasAlarconResume.pdf" 
                 className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <Download className="w-6 h-6" />
@@ -164,7 +164,7 @@ function App() {
               {/* Lenscribe Project */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="/assets/LenscribeConceptArt.png" 
+                  src="/LenscribeConceptArt.png" 
                   alt="Lenscribe Project"
                   className="w-full h-64 object-cover"
                 />
@@ -210,7 +210,7 @@ function App() {
               {/* GameBoy DMG Project */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="/assets/gameboyproject.png" 
+                  src="/gameboyproject.png" 
                   alt="GameBoy Project"
                   className="w-full h-64 object-cover"
                 />
@@ -426,7 +426,7 @@ function App() {
               {/* BISC Relay Station */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="/assets/BISCRelay.png" 
+                  src="/BISCRelay.png" 
                   alt="Neural Interface System"
                   className="w-full h-64 object-cover"
                 />
@@ -505,7 +505,7 @@ function App() {
                     Designed and characterized an On-Chip 2-Stage CMOS 10V/V Feedback Amplifier in Cadence
                   </p>
                   <div className="flex items-center gap-4">
-                    <a href="/assets/OscilloscopeAmplifier.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                    <a href="/OscilloscopeAmplifier.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
                     </a>
@@ -522,7 +522,7 @@ function App() {
                     Developed a digitally programmable 6th-order Ackerberg-Mossberg topology filter with multiple configurations
                   </p>
                   <div className="flex items-center gap-4">
-                    <a href="/assets/ProgrammableAAF.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                    <a href="/ProgrammableAAF.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
                     </a>
