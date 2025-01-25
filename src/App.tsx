@@ -68,7 +68,7 @@ function App() {
                 <span>GitHub</span>
               </a>
               <a 
-                href="/portfolio/assets/NicolasAlarconResume.pdf" 
+                href="/assets/NicolasAlarconResume.pdf" 
                 className="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <Download className="w-6 h-6" />
@@ -152,7 +152,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/portfolio/projects/vna-dashboard" 
+                    href="/projects/vna-dashboard" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -164,7 +164,7 @@ function App() {
               {/* Lenscribe Project */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="/portfolio/assets/LenscribeConceptArt.png" 
+                  src="/assets/LenscribeConceptArt.png" 
                   alt="Lenscribe Project"
                   className="w-full h-64 object-cover"
                 />
@@ -196,7 +196,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/portfolio/projects/lenscribe" 
+                    href="/projects/lenscribe" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -210,7 +210,7 @@ function App() {
               {/* GameBoy DMG Project */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="/portfolio/assets/gameboyproject.png" 
+                  src="/assets/gameboyproject.png" 
                   alt="GameBoy Project"
                   className="w-full h-64 object-cover"
                 />
@@ -242,7 +242,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/portfolio/projects/gameboy-emulator" 
+                    href="/projects/gameboy-emulator" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -284,7 +284,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/portfolio/projects/quadruped-robot" 
+                    href="/projects/quadruped-robot" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -318,7 +318,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/portfolio/projects/superscalar-processor" 
+                    href="/projects/superscalar-processor" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -362,7 +362,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/portfolio/projects/automated-turntable" 
+                    href="/projects/automated-turntable" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -414,7 +414,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/portfolio/projects/cell-classifier" 
+                    href="/projects/cell-classifier" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -426,7 +426,7 @@ function App() {
               {/* BISC Relay Station */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="/portfolio/assets/BISCRelay.png" 
+                  src="/assets/BISCRelay.png" 
                   alt="Neural Interface System"
                   className="w-full h-64 object-cover"
                 />
@@ -458,7 +458,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/portfolio/projects/bisc-relay" 
+                    href="/projects/bisc-relay" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -505,7 +505,7 @@ function App() {
                     Designed and characterized an On-Chip 2-Stage CMOS 10V/V Feedback Amplifier in Cadence
                   </p>
                   <div className="flex items-center gap-4">
-                    <a href="/portfolio/assets/OscilloscopeAmplifier.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                    <a href="/assets/OscilloscopeAmplifier.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
                     </a>
@@ -522,7 +522,7 @@ function App() {
                     Developed a digitally programmable 6th-order Ackerberg-Mossberg topology filter with multiple configurations
                   </p>
                   <div className="flex items-center gap-4">
-                    <a href="/portfolio/assets/ProgrammableAAF.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                    <a href="/assets/ProgrammableAAF.pdf" className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
                     </a>
