@@ -1,9 +1,12 @@
-name: Deploy
+name: Github Pages Deployment
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -14,11 +17,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Ensure you use a supported Node.js version
+          cache: 'npm'
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm ci  # More reliable than npm install for CI/CD
 
       - name: Build project
         run: npm run build
@@ -35,10 +41,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
-    permissions:
-      contents: write
-
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
@@ -50,3 +56,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          force_orphan: true  # Fixes issues with old files lingering in gh-pages
