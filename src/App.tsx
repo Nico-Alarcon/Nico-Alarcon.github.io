@@ -1,11 +1,11 @@
 import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Download, Cpu, Zap, Radio, Brain, FileText } from 'lucide-react';
-import resume from '../assets/NicolasAlarconResume.pdf';
-import ProgrammableAAF from '../assets/ProgrammableAAF.pdf';
-import OscilloscopeAmplifier from '../assets/OscilloscopeAmplifier.pdf'
-import Lenscribe from '../assets/LenscribeConceptArt.png';
-import BISC from '../assets/BISCRelay.png';
-import gameboy from '../assets/gameboyproject.png';
+import resume from './reports/NicolasAlarconResume.pdf';
+import ProgrammableAAF from './reports/ProgrammableAAF.pdf';
+import OscilloscopeAmplifier from './reports/OscilloscopeAmplifier.pdf'
+import Lenscribe from './images/LenscribeConceptArt.png';
+import BISC from './images/BISCRelay.png';
+import gameboy from './images/gameboyproject.png';
 
 
 function App() {
