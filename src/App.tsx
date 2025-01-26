@@ -32,12 +32,6 @@ function App() {
             </h1>
           </div>
           
-          {/* Description - Bottom Left */}
-          <div className="mb-8">
-            <p className="text-xl text-white/80">
-                Electrical Engineer at Columbia University
-            </p>
-          </div>
         </div>
       </header>
 
