@@ -1,12 +1,12 @@
-name: Github Pages Deployment
+name: Build & deploy
 
 on:
   push:
     branches:
       - main
-
-permissions:
-  contents: write
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -14,26 +14,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Installing Node.js
+        uses: actions/setup-node@v1
         with:
-          node-version: 18  # Ensure you use a supported Node.js version
-          cache: 'npm'
+          node-version: 16.x
 
-      - name: Install dependencies
-        run: npm ci  # More reliable than npm install for CI/CD
+      - name: Installing NPM packages
+        run: npm ci
 
-      - name: Build project
+      - name: Building project
         run: npm run build
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
+      - name: Running tests
+        run: npm run test
+
+      - name: Uploading production-ready build files
+        uses: actions/upload-artifact@v2
         with:
           name: production-files
-          path: ./dist
+          path: ./build
 
   deploy:
     name: Deploy
@@ -42,18 +44,14 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Download artifact
-        uses: actions/download-artifact@v3
+      - name: Downloading artifact
+        uses: actions/download-artifact@v2
         with:
           name: production-files
-          path: ./dist
+          path: ./build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploying to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          force_orphan: true  # Fixes issues with old files lingering in gh-pages
+          publish_dir: ./build
