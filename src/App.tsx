@@ -32,7 +32,6 @@ function App() {
             </h1>
           </div>
           
-          
         </div>
       </header>
 
@@ -157,7 +156,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/vna-dashboard" 
+                    href="./components/inprogress.html" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -201,7 +200,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/lenscribe" 
+                    href="./components/inprogress.html" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -247,7 +246,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/gameboy-emulator" 
+                    href="https://github.com/Nico-Alarcon/GameBoy-Hardware-Emulator-DEI-Soc" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -289,7 +288,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/quadruped-robot" 
+                    href="./components/inprogress.html" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -323,7 +322,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/superscalar-processor" 
+                    href="./components/inprogress.html" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -367,7 +366,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/automated-turntable" 
+                    href="https://github.com/Nico-Alarcon/Turntable-Project" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -419,7 +418,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/cell-classifier" 
+                    href="./components/inprogress.html" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -463,7 +462,7 @@ function App() {
                     ))}
                   </div>
                   <a 
-                    href="/projects/bisc-relay" 
+                    href="./components/inprogress.html" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
