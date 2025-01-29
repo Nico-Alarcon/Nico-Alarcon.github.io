@@ -1,5 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Download, Cpu, Zap, Radio, Brain, FileText } from 'lucide-react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import InProgress from './pages/InProgress';
 import resume from './reports/NicolasAlarconResume.pdf';
 import ProgrammableAAF from './reports/ProgrammableAAF.pdf';
 import OscilloscopeAmplifier from './reports/OscilloscopeAmplifier.pdf'
@@ -155,10 +157,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="./components/inprogress.html" 
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                  >
+                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -199,10 +198,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="./components/inprogress.html" 
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                  >
+                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -287,10 +283,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="./components/inprogress.html" 
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                  >
+                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -321,10 +314,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="./components/inprogress.html" 
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                  >
+                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -417,10 +407,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="./components/inprogress.html" 
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                  >
+                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -461,10 +448,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="./components/inprogress.html" 
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                  >
+                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
