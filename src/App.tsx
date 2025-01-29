@@ -531,6 +531,7 @@ function App() {
                       View Report
                     </a>
                   </div>
+                  
                 </div>
               </div>
             </div>
