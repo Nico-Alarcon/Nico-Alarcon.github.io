@@ -1,16 +1,15 @@
 import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import { Github, Linkedin, Mail, ExternalLink, Download, Cpu, Zap, Radio, Brain, FileText } from 'lucide-react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import InProgress from './pages/InProgress';
 import resume from './reports/NicolasAlarconResume.pdf';
 import ProgrammableAAF from './reports/ProgrammableAAF.pdf';
-import OscilloscopeAmplifier from './reports/OscilloscopeAmplifier.pdf'
+import OscilloscopeAmplifier from './reports/OscilloscopeAmplifier.pdf';
 import Lenscribe from './images/LenscribeConceptArt.png';
 import BISC from './images/BISCRelay.png';
 import gameboy from './images/gameboyproject.png';
+import InProgress from './components/InProgress';
 
-
-function App() {
+function Portfolio() {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Hero Section */}
@@ -33,13 +32,9 @@ function App() {
               Nicolas Alarcon
             </h1>
           </div>
-          
         </div>
       </header>
 
-      
-      
-      
       {/* About Section */}
       <section className="relative py-24 bg-white">
         <div className="relative container mx-auto px-6">
@@ -83,7 +78,6 @@ function App() {
           </div>
         </div>
       </section>
-
 
       {/* Skills Section */}
       <section className="py-20 bg-white">
@@ -157,10 +151,13 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
+                  <Link 
+                    to="/projects/vna-dashboard" 
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                  >
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -198,14 +195,15 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
+                  <Link 
+                    to="/projects/lenscribe" 
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                  >
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
-
-              
 
               {/* GameBoy DMG Project */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
@@ -241,13 +239,13 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="https://github.com/Nico-Alarcon/GameBoy-Hardware-Emulator-DEI-Soc" 
+                  <Link 
+                    to="/projects/gameboy-emulator" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -283,10 +281,13 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
+                  <Link 
+                    to="/projects/quadruped-robot" 
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                  >
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -314,10 +315,13 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
+                  <Link 
+                    to="/projects/superscalar-processor" 
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                  >
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -355,17 +359,15 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="https://github.com/Nico-Alarcon/Turntable-Project" 
+                  <Link 
+                    to="/projects/turntable" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
-
-              
             </div>
           </div>
 
@@ -407,10 +409,13 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
+                  <Link 
+                    to="/projects/cell-classifier" 
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                  >
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -448,10 +453,13 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a href="/inprogress" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold">
+                  <Link 
+                    to="/projects/bisc-relay" 
+                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                  >
                     <span>View Project</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -493,6 +501,13 @@ function App() {
                     Designed and characterized an On-Chip 2-Stage CMOS 10V/V Feedback Amplifier in Cadence
                   </p>
                   <div className="flex items-center gap-4">
+                    <Link 
+                      to="/projects/oscilloscope-amplifier" 
+                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                    >
+                      <span>View Project</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </Link>
                     <a href={OscilloscopeAmplifier} className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
@@ -510,12 +525,18 @@ function App() {
                     Developed a digitally programmable 6th-order Ackerberg-Mossberg topology filter with multiple configurations
                   </p>
                   <div className="flex items-center gap-4">
+                    <Link 
+                      to="/projects/antialiasing-filter" 
+                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                    >
+                      <span>View Project</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </Link>
                     <a href={ProgrammableAAF} className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
                     </a>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -530,6 +551,14 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Portfolio />} />
+      <Route path="/projects/:projectId" element={<InProgress />} /> </Routes>
   );
 }
 
