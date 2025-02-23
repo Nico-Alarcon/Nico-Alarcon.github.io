@@ -29,7 +29,7 @@ export default function GameBoyProject() {
           'USB Interface',
           'VGA Output'
         ]}
-        overview="The BameGoy project is a comprehensive hardware implementation of the original GameBoy system, featuring cycle-accurate timing and authentic behavior. Built around a modified Z80 core compatible with the GameBoy instruction set, the system includes a fully-featured Pixel Processing Unit (PPU), memory management system, and VGA output capabilities. Developed while working full-time as a Quantum Hardware Engineering Intern at IBM, this project represents not just a technical achievement, but a testament to dedication and time management. The implementation leverages QSys for system integration, demonstrating advanced hardware design principles and modern FPGA development practices."
+        overview="The BameGoy project is a comprehensive hardware implementation of the original GameBoy system, featuring cycle-accurate timing and authentic behavior. Built around a modified Z80 core compatible with the GameBoy instruction set, the system includes a fully-featured Pixel Processing Unit (PPU), memory management system, and VGA output capabilities. The implementation leverages QSys for system integration, demonstrating advanced hardware design principles and modern FPGA development practices."
         gallery={[
           {
             url: systemBlockDiagram,
