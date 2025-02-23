@@ -8,6 +8,7 @@ import Lenscribe from './images/LenscribeConceptArt.png';
 import BISC from './images/BISCRelay.png';
 import gameboy from './images/gameboyproject.png';
 import InProgress from './components/InProgress';
+import GameBoyProject from './pages/GameBoyProject';
 
 function Portfolio() {
   return (
@@ -501,13 +502,6 @@ function Portfolio() {
                     Designed and characterized an On-Chip 2-Stage CMOS 10V/V Feedback Amplifier in Cadence
                   </p>
                   <div className="flex items-center gap-4">
-                    <Link 
-                      to="/projects/oscilloscope-amplifier" 
-                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                    >
-                      <span>View Project</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </Link>
                     <a href={OscilloscopeAmplifier} className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
@@ -525,13 +519,6 @@ function Portfolio() {
                     Developed a digitally programmable 6th-order Ackerberg-Mossberg topology filter with multiple configurations
                   </p>
                   <div className="flex items-center gap-4">
-                    <Link 
-                      to="/projects/antialiasing-filter" 
-                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                    >
-                      <span>View Project</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </Link>
                     <a href={ProgrammableAAF} className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
                       <FileText className="w-4 h-4" />
                       View Report
@@ -558,7 +545,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Portfolio />} />
-      <Route path="/projects/:projectId" element={<InProgress />} /> </Routes>
+      <Route path="/projects/gameboy-emulator" element={<GameBoyProject />} />
+      <Route path="/projects/:projectId" element={<InProgress />} />
+    </Routes>
   );
 }
 
