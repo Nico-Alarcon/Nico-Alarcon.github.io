@@ -5,11 +5,13 @@ import systemBlockDiagram from '../images/system_block_diagram.png';
 import qsysMapping from '../images/qsys_mapping.png';
 import ppuBlockDiagram from '../images/ppu_block_diagram.png';
 import vgaOutput from '../images/vga_output.png';
+import gameBoySetup from '../images/GameBoySetup.jpg';
+import gameBoySuccess from '../images/GameBoySuccess.jpg';
 import proposal from '../reports/BameGoy.pdf';
 import designDoc from '../reports/BameGoyDesignDoc.pdf';
 import finalReport from '../reports/BameGoy-report.pdf';
 import presentation from '../reports/BameGoy-presentation.pdf';
-import { FileText, Github, FileCode, Presentation } from 'lucide-react';
+import { FileText, FileCode, Presentation } from 'lucide-react';
 
 export default function GameBoyProject() {
   return (
@@ -80,6 +82,48 @@ export default function GameBoyProject() {
         conclusion="The BameGoy project represents not just a technical achievement in hardware emulation, but a personal milestone in balancing professional and academic pursuits. Developed while working full-time as a Quantum Hardware Engineering Intern at IBM, this project showcases both technical expertise in FPGA development and the ability to manage complex, long-term goals. The implementation of system integration using QSys demonstrates modern FPGA development practices, while the successful execution of the GameBoy architecture proves the feasibility of hardware-based emulation. This project, while challenging to complete alongside professional responsibilities, stands as one of my proudest achievements as an Electrical Engineer, representing the culmination of longtime personal goals and practical embedded systems expertise."
       />
 
+      {/* Project Photos Section */}
+      <section className="bg-slate-50 py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Project in Action</h2>
+            <p className="text-lg text-gray-700 mb-10">
+              The following photos showcase the final implementation of the GameBoy hardware emulator running on an FPGA development board with VGA output.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src={gameBoySetup}
+                  alt="GameBoy Emulator Setup"
+                  className="w-full h-auto"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Hardware Setup</h3>
+                  <p className="text-gray-700">
+                    The complete hardware setup showing the FPGA development board connected to a VGA monitor, running a commercial GameBoy game with full compatibility.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src={gameBoySuccess}
+                  alt="Successful Implementation"
+                  className="w-full h-auto"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Successful Implementation</h3>
+                  <p className="text-gray-700">
+                    A proud moment showcasing the successful implementation of the GameBoy hardware emulator, demonstrating the project's functionality and achievement.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Project Documentation Section */}
       <section className="bg-slate-50 py-16">
         <div className="container mx-auto px-6">
@@ -140,7 +184,10 @@ export default function GameBoyProject() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-blue-600 hover:text-blue-800 transition-colors"
                   >
-                    <Github className="w-5 h-5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                      <path d="M9 18c-4.51 2-5-2-7-2" />
+                    </svg>
                     <span>GitHub Repository</span>
                   </a>
                 </div>
@@ -149,6 +196,8 @@ export default function GameBoyProject() {
           </div>
         </div>
       </section>
+
+
     </div>
   );
 }
