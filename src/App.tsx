@@ -8,6 +8,7 @@ import OscilloscopeAmplifier from './reports/OscilloscopeAmplifier.pdf';
 import Lenscribe from './images/LenscribeConceptArt.png';
 import BISC from './images/BISCRelay.png';
 import gameboy from './images/gameboyproject.png';
+import quadruped from './images/quadruped.png'
 import InProgress from './components/InProgress';
 import GameBoyProject from './pages/GameBoyProject';
 
@@ -254,7 +255,7 @@ function Portfolio() {
               {/* Walking Quadruped Robot */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="https://images.squarespace-cdn.com/content/v1/56ba85d9cf80a17a6f304b72/1599841874563-MU14PCV1KCULVUBKXGRT/howls-moving-castle-disneyscreencaps.com-4492.jpg?format=2500w" 
+                  src={quadruped} 
                   alt="Quadruped Robot"
                   className="w-full h-64 object-cover"
                 />
