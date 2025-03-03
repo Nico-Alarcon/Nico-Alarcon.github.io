@@ -15,7 +15,17 @@ import presentation from '../reports/BameGoy-presentation.pdf';
 import { FileText, FileCode, Presentation } from 'lucide-react';
 
 export default function GameBoyProject() {
-  return (
+    // Set the document title when the component mounts
+    React.useEffect(() => {
+      document.title = "GameBoy DMG Hardware Emulator - Nicolas Alarcon";
+      
+      // Reset the title when the component unmounts
+      return () => {
+        document.title = "Nicolas Alarcon's Portfolio";
+      };
+    }, []);
+  
+    return (
     <div>
       <ProjectPage
         title="GameBoy DMG Hardware Emulator"
