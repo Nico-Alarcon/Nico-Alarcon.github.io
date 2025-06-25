@@ -5,12 +5,16 @@ import githubIcon from './images/icons8-github_grey.svg';
 import resume from './reports/NicolasAlarconResume.pdf';
 import ProgrammableAAF from './reports/ProgrammableAAF.pdf';
 import OscilloscopeAmplifier from './reports/OscilloscopeAmplifier.pdf';
+import LowNoiseAmplifier from './reports/LowNoiseAmplifier.pdf';
 import Lenscribe from './images/LenscribeConceptArt.png';
 import BISC from './images/BISCRelay.png';
 import gameboy from './images/gameboyproject.png';
 import quadruped from './images/quadruped.png'
+import pipelineDiagram from './images/p6_pipeline_main.png';
 import InProgress from './components/InProgress';
 import GameBoyProject from './pages/GameBoyProject';
+import QuadrupedRobot from './pages/QuadrupedRobot';
+import OutOfOrderProcessor from './pages/OutOfOrderProcessor';
 
 function Portfolio() {
   return (
@@ -43,7 +47,7 @@ function Portfolio() {
         <div className="relative container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8 text-gray-900">About Me</h2>
-            <h3 className="text-2xl text-blue-600 mb-6">Electrical Engineering Senior at Columbia University</h3>
+            <h3 className="text-2xl text-blue-600 mb-6">Electrical Engineer from Columbia University</h3>
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
               Specializing in embedded systems, signal processing, and mixed signal circuit design. 
               Passionate about creating innovative solutions in embedded systems and biomedical devices.
@@ -95,7 +99,7 @@ function Portfolio() {
             <div className="p-6 rounded-xl bg-slate-50 hover:shadow-lg transition-shadow">
               <Zap className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Circuit Design</h3>
-              <p className="text-gray-600">Analog Circuits, Filter Design, PCB Design, Signal Conditioning</p>
+              <p className="text-gray-600">Analog Circuits, Filter Design, PCB Design, RF Circuit Design</p>
             </div>
             <div className="p-6 rounded-xl bg-slate-50 hover:shadow-lg transition-shadow">
               <Radio className="w-12 h-12 text-blue-600 mb-4" />
@@ -154,13 +158,9 @@ function Portfolio() {
                       </span>
                     ))}
                   </div>
-                  <Link 
-                    to="/projects/vna-dashboard" 
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
-                  >
-                    <span>View Project</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </Link>
+                  <p className="text-sm text-gray-500 italic">
+                    Details Not viewable due to NDA signed with IBM.
+                  </p>
                 </div>
               </div>
 
@@ -179,7 +179,8 @@ function Portfolio() {
                     </div>
                   </div>
                   <p className="text-gray-600 mb-4">
-                    Communication aid projecting real-time subtitles onto smart glasses using a beamformed microphone array
+                    Communication aid projecting real-time subtitles onto smart glasses using a beamformed microphone array receiving first place in Senior Design Expo
+                    for the Electrical Engineering Department.
                   </p>
                   <div className="mb-6">
                     <h4 className="font-semibold mb-2">Key Responsibilities:</h4>
@@ -192,7 +193,7 @@ function Portfolio() {
                     </ul>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {['DSP', 'Analog Design', 'MATLAB', 'Python', 'MCU', 'Raspberry Pi'].map((skill) => (
+                    {['DSP', 'Analog Design', 'MATLAB', 'Python', 'Microcontrollers', 'Raspberry Pi'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
                         {skill}
                       </span>
@@ -263,22 +264,23 @@ function Portfolio() {
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h3 className="text-2xl font-bold mb-2">Walking Quadruped Robot</h3>
-                      <p className="text-blue-600 font-semibold">Robotics Studio Course Project (In Progress)</p>
+                      <p className="text-blue-600 font-semibold">Robotics Studio Course Project</p>
                     </div>
                   </div>
                   <p className="text-gray-600 mb-4">
-                    Design, Simulate, and Manufacture a legged locomotion robot from start to finish, controlled with a Raspberry Pi
+                    Designed, simulated, and manufactured a legged locomotion robot from start to finish, controlled with a Raspberry Pi
                   </p>
                   <div className="mb-6">
                     <h4 className="font-semibold mb-2">Key Components:</h4>
                     <ul className="list-disc list-inside text-gray-600 space-y-1">
-                      <li>Mechanical design and optimization</li>
-                      <li>Dynamic simulation in PyBullet</li>
+                      <li>Rapid Prototyping in Solidworks</li>
+                      <li>Design for manufacturing</li>
+                      <li>Electronic System Design</li>
                       <li>Gait pattern generation</li>
                     </ul>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {['System Integration', 'Raspberry Pi', 'Solidworks', 'PyBullet Simulation', 'Python'].map((skill) => (
+                    {['System Integration', 'Raspberry Pi', 'Solidworks', 'Manufacturing', 'Python'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
                         {skill}
                       </span>
@@ -297,20 +299,32 @@ function Portfolio() {
               {/* Superscalar Processor */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80" 
+                  src={pipelineDiagram} 
                   alt="Processor Architecture"
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold mb-2">Superscalar Out-of-Order Processor</h3>
-                      <p className="text-blue-600 font-semibold">Computer Architectures Course Project (In Progress)</p>
+                      <h3 className="text-2xl font-bold mb-2">RISC-V Out-of-Order Pentium6 Pipelined Processor</h3>
+                      <p className="text-blue-600 font-semibold">Computer Architectures Course Project</p>
                     </div>
                   </div>
+
                   <p className="text-gray-600 mb-4">
-                    Designing and implementing a superscalar out-of-order processor with modern architectural features
+                    Designed and implemented a custom synthesizable RISC-V processor with out-of-order execution and advanced caching features.
                   </p>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-2">Key Achievements:</h4>
+                    <ul className="list-disc list-inside text-gray-600 space-y-1">
+                      <li>Built RISC-V RV32I processor supporting out-of-order, speculative execution</li>
+                      <li>Integrated 256B non-blocking D-cache and prefetching I-cache with split LSQ</li>
+                      <li>Verified using custom C, Assembly, and Verilog testbenches and a visual debugger</li>
+                      <li>Achieved 2× CPI improvement over initial design via staged feature additions</li>
+                    </ul>
+                  </div>
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {['SystemVerilog', 'Computer Architecture', 'RTL Design', 'Verification', 'RISC-V'].map((skill) => (
                       <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
@@ -318,8 +332,9 @@ function Portfolio() {
                       </span>
                     ))}
                   </div>
+
                   <Link 
-                    to="/projects/superscalar-processor" 
+                    to="/projects/riscv-processor" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -327,6 +342,7 @@ function Portfolio() {
                   </Link>
                 </div>
               </div>
+
 
               {/* Turntable Project */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
@@ -472,6 +488,82 @@ function Portfolio() {
           <div className="mb-16">
             <h3 className="text-2xl font-bold mb-8 text-gray-800">Course Projects</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+              {/* 2-Stage Starlink Low Noise Amplifier */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-2">2-Stage Starlink Low Noise Amplifier</h3>
+                  <p className="text-blue-600 mb-4">Microwave Circuit Design Final Project</p>
+                  <p className="text-gray-600 mb-4">
+                    Designed an unconditionally stable 2-Stage Low Noise Amplifier for Starlink Satellite Operating Frequency in 
+                    Keysight ADS for a Duroid 5880 board
+                  </p>
+                  <div className="flex items-center gap-4 mb-6">
+                    <a href={LowNoiseAmplifier} className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                      <FileText className="w-4 h-4" />
+                      View Report
+                    </a>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {['Keysight ADS', 'RF Circuit Design', 'Analog Circuit Design'].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Oscilloscope Driver Amplifier */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-2">Oscilloscope Driver Amplifier</h3>
+                  <p className="text-blue-600 mb-4">Analog Electronic Circuits Final Project</p>
+                  <p className="text-gray-600 mb-4">
+                    Designed and characterized an On-Chip 2-Stage CMOS 10V/V Feedback Amplifier in Cadence
+                  </p>
+                  <div className="flex items-center gap-4 mb-6">
+                    <a href={OscilloscopeAmplifier} className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                      <FileText className="w-4 h-4" />
+                      View Report
+                    </a>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {['Cadence', 'Python', 'Excel', 'Analog Circuit Design'].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              
+
+              {/* Programmable AAF */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-2">Programmable AntiAliasing Filter</h3>
+                  <p className="text-blue-600 mb-4">Analog Filter Synthesis Project</p>
+                  <p className="text-gray-600 mb-4">
+                    Developed a digitally programmable 6th-order Ackerberg-Mossberg topology filter with multiple configurations
+                  </p>
+                  <div className="flex items-center gap-4 mb-6">
+                    <a href={ProgrammableAAF} className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                      <FileText className="w-4 h-4" />
+                      View Report
+                    </a>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {['Matlab', 'Cadence', 'Excel', 'Analog Circuit Design'].map((skill) => (
+                      <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               {/* Web Server */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <div className="p-8">
@@ -495,39 +587,6 @@ function Portfolio() {
                 </div>
               </div>
 
-              {/* Oscilloscope Driver Amplifier */}
-              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-2">Oscilloscope Driver Amplifier</h3>
-                  <p className="text-blue-600 mb-4">Analog Electronic Circuits Final Project</p>
-                  <p className="text-gray-600 mb-4">
-                    Designed and characterized an On-Chip 2-Stage CMOS 10V/V Feedback Amplifier in Cadence
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <a href={OscilloscopeAmplifier} className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
-                      <FileText className="w-4 h-4" />
-                      View Report
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Programmable AAF */}
-              <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-2">Programmable AntiAliasing Filter</h3>
-                  <p className="text-blue-600 mb-4">Analog Filter Synthesis Project</p>
-                  <p className="text-gray-600 mb-4">
-                    Developed a digitally programmable 6th-order Ackerberg-Mossberg topology filter with multiple configurations
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <a href={ProgrammableAAF} className="text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
-                      <FileText className="w-4 h-4" />
-                      View Report
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -548,6 +607,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Portfolio />} />
       <Route path="/projects/gameboy-emulator" element={<GameBoyProject />} />
+      <Route path="/projects/quadruped-robot" element={<QuadrupedRobot />} />
+      <Route path="/projects/riscv-processor" element={<OutOfOrderProcessor />} />
       <Route path="/projects/:projectId" element={<InProgress />} />
     </Routes>
   );
