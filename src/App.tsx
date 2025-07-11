@@ -15,6 +15,7 @@ import InProgress from './components/InProgress';
 import GameBoyProject from './pages/GameBoyProject';
 import QuadrupedRobot from './pages/QuadrupedRobot';
 import OutOfOrderProcessor from './pages/OutOfOrderProcessor';
+import Turntable from './images/turntable_iso.png';
 
 function Portfolio() {
   return (
@@ -347,7 +348,7 @@ function Portfolio() {
               {/* Turntable Project */}
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <img 
-                  src="https://images.unsplash.com/photo-1542208998-f6dbbb27a72f?auto=format&fit=crop&q=80" 
+                  src={Turntable}
                   alt="Turntable Project"
                   className="w-full h-64 object-cover"
                 />
