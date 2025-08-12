@@ -16,6 +16,7 @@ import GameBoyProject from './pages/GameBoyProject';
 import QuadrupedRobot from './pages/QuadrupedRobot';
 import OutOfOrderProcessor from './pages/OutOfOrderProcessor';
 import Turntable from './images/turntable_iso.png';
+import LenScribe from './pages/LenScribe';
 
 function Portfolio() {
   return (
@@ -201,7 +202,7 @@ function Portfolio() {
                     ))}
                   </div>
                   <Link 
-                    to="/projects/lenscribe" 
+                    to="/projects/LenScribe" 
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
                   >
                     <span>View Project</span>
@@ -610,6 +611,7 @@ function App() {
       <Route path="/projects/gameboy-emulator" element={<GameBoyProject />} />
       <Route path="/projects/quadruped-robot" element={<QuadrupedRobot />} />
       <Route path="/projects/riscv-processor" element={<OutOfOrderProcessor />} />
+      <Route path="/projects/LenScribe" element={<LenScribe />} />
       <Route path="/projects/:projectId" element={<InProgress />} />
     </Routes>
   );
